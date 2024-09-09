@@ -1,0 +1,270 @@
+/* global values start  */
+:root {
+  --blue-color: #0075ff;
+  --blue-alt-color: #0d69d5;
+  --orange-color: #f59e0b;
+  --green-color: #22c55e;
+  --red-color: #f44336;
+  --gray-color: #888;
+  --main-transition: 0.3s;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a,
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+p,
+a,
+span,
+div,
+ul,
+li,
+input,
+label {
+  font-weight: 500;
+}
+/* global values end */
+/* main components start */
+/* heading start  */
+h1.main-heading {
+  text-transform: capitalize;
+  padding: 5px 20px;
+  letter-spacing: -1px;
+  position: relative;
+  width: fit-content;
+  grid-area: 2/1/2/4;
+  height: fit-content;
+  margin: 30px 0;
+}
+h1.main-heading::after,
+h1.main-heading::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: white;
+  width: 55%;
+  left: 24px;
+  bottom: -10px;
+}
+h1.main-heading::after {
+  background-color: black;
+  width: 20%;
+}
+.main-h2 {
+  margin: 0 0 15px;
+}
+.main2-h {
+  margin: 0 0 15px;
+}
+/* heading end  */
+/* toggle button start  */
+form.toggle {
+  width: fit-content;
+}
+form.toggle label div {
+  width: 78px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 30px;
+  position: relative;
+  transition: 0.5s;
+  cursor: pointer;
+}
+form.toggle label div span {
+  background-color: white;
+  color: #ccc;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+}
+form.toggle label div span i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form.toggle input:checked + label > div {
+  background-color: purple;
+}
+form.toggle input:checked + label span {
+  transform: translate(50px, -50%);
+  left: unset;
+}
+form.toggle input:checked + label span i {
+  color: purple;
+}
+form.toggle input:checked + label span i::before {
+  content: "\f00c";
+}
+form.toggle input {
+  display: none;
+}
+.boxs2 .head p {
+  font-size: 15px;
+  color: var(--gray-color);
+  margin: 10px 0 0;
+}
+/* toggle button end  */
+/* place holder start  */
+input::placeholder {
+  transition: var(--main-transition);
+}
+input:focus::placeholder {
+  opacity: 0;
+}
+/* place holder end  */
+/* main components end */
+/* frame work start  */
+.m-20 {
+  margin: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mr-20 {
+  margin-right: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.p-20 {
+  padding: 20px;
+}
+.p-10 {
+  padding: 10px;
+}
+.p-15 {
+  padding: 15px;
+}
+.pt-20 {
+  padding-top: 20px;
+}
+.pr-20 {
+  padding-right: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.pl-20 {
+  padding-left: 20px;
+}
+.rad-circle {
+  border-radius: 50%;
+}
+.rad-6 {
+  border-radius: 6px;
+}
+.rad-4 {
+  border-radius: 4px;
+}
+.rad-10 {
+  border-radius: 10px;
+}
+.back-white {
+  background-color: white;
+}
+.dis-flex {
+  display: flex;
+}
+.flex-fre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.dis-grid {
+  display: grid;
+}
+.grid-fre {
+  justify-content: center;
+  align-items: center;
+}
+.trans-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dis-block {
+  display: block;
+}
+.dis-inblock {
+  display: inline-block;
+}
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+
+@media (max-width: 776px) {
+  .hide-item {
+    display: none;
+  }
+}
+.m-box-sh {
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.m-box-sh2 {
+  box-shadow: 0px 0px 10px 0px rgba(34, 5, 34, 0.4);
+}
+.m-box-sh3 {
+  box-shadow: 0px 0px 10px rgb(0 117 255 / 25%);
+}
+.m-box-sh4 {
+  box-shadow: 0px 0px 10px rgba(0, 128, 0, 0.4);
+}
+.m-box-sh5 {
+  box-shadow: 0px 0px 10px #dbc2a8e6;
+}
+.m-box-sh6 {
+  box-shadow: 0px 0px 10px rgba(255, 165, 0, 0.4);
+}
+.flex-r-reverse {
+  display: flex;
+  flex-flow: row-reverse;
+}
+.width-f {
+  width: 100%;
+}
+.dis-block {
+  display: block;
+}
+
+/* frame work end */
